@@ -2,41 +2,87 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>สภานักเรียนโรงเรียนของเรา</title>
+  <title>สภานักเรียน | โรงเรียนของเรา</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      font-family: Arial;
-      background: #f4f4f4;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #1e40af;
+      background: #1e3a8a;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
     nav {
-      background: #2563eb;
-      padding: 10px;
-      text-align: center;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 10px;
+    }
+
+    nav ul li {
       margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1e3a8a;
       font-weight: bold;
     }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
     section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card {
       background: white;
-      margin: 20px;
       padding: 20px;
       border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
+
     footer {
+      background: #1e3a8a;
+      color: white;
       text-align: center;
-      color: gray;
-      padding: 10px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -45,31 +91,65 @@
 
 <header>
   <h1>สภานักเรียนโรงเรียนของเรา</h1>
-  <p>เป็นตัวแทนนักเรียนเพื่อพัฒนาโรงเรียน</p>
+  <p>เสียงของนักเรียน เพื่อโรงเรียนที่ดีกว่า</p>
 </header>
 
 <nav>
-  <a href="index.html">หน้าหลัก</a>
-  <a href="team.html">คณะกรรมการ</a>
-  <a href="activity.html">กิจกรรม</a>
-  <a href="contact.html">ติดต่อ</a>
+  <ul>
+    <li><a href="#about">หน้าหลัก</a></li>
+    <li><a href="#team">คณะกรรมการ</a></li>
+    <li><a href="#activity">กิจกรรม</a></li>
+    <li><a href="#contact">ติดต่อ</a></li>
+  </ul>
 </nav>
 
-<section>
+<section id="about">
   <h2>เกี่ยวกับสภานักเรียน</h2>
-  <p>สภานักเรียนเป็นองค์กรที่ทำหน้าที่เป็นตัวแทนนักเรียนในการเสนอความคิดเห็น</p>
+  <div class="card">
+    <p>
+      สภานักเรียนเป็นองค์กรที่เป็นตัวแทนของนักเรียน
+      ทำหน้าที่เสนอความคิดเห็น ประสานงาน และจัดกิจกรรม
+      เพื่อพัฒนาโรงเรียนและสร้างประโยชน์ให้กับนักเรียนทุกคน
+    </p>
+  </div>
 </section>
 
-<section>
-  <h2>ข่าวสาร</h2>
-  <ul>
-    <li>เปิดรับสมัครคณะกรรมการ</li>
-    <li>กิจกรรมจิตอาสา</li>
-  </ul>
+<section id="team">
+  <h2>คณะกรรมการสภานักเรียน</h2>
+  <div class="card">
+    <ul>
+      <li>ประธานสภานักเรียน: ................</li>
+      <li>รองประธาน: ................</li>
+      <li>เลขานุการ: ................</li>
+      <li>เหรัญญิก: ................</li>
+    </ul>
+  </div>
+</section>
+
+<section id="activity">
+  <h2>กิจกรรม</h2>
+  <div class="card">
+    <ul>
+      <li>กิจกรรมวันไหว้ครู</li>
+      <li>กิจกรรมจิตอาสา</li>
+      <li>กิจกรรมพัฒนานักเรียน</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>ติดต่อเรา</h2>
+  <div class="card">
+    <p>
+      ห้องสภานักเรียน อาคาร ..........<br>
+      โทร: 0X-XXXX-XXXX<br>
+      Facebook: สภานักเรียนโรงเรียนของเรา
+    </p>
+  </div>
 </section>
 
 <footer>
-  © 2026 สภานักเรียนโรงเรียนของเรา
+  <p>© 2026 สภานักเรียนโรงเรียนของเรา</p>
 </footer>
 
 </body>
